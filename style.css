@@ -108,6 +108,8 @@ h1 {
     box-shadow: rgb(207, 155, 88) 20px -10px;
 }
 
+
+
 .tituloBox {
     font-size: 200%;
     color: #CF9B58;
@@ -191,6 +193,194 @@ h1 {
     border: 5px solid #545454;
 }
 
+#beneficios {
+    margin-top: 0px;
+    font-size: 400%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #545454;
+}
+
+#containerBeneficios {
+    display: flex;
+}
+
+#divorcio2 {
+    border-radius: 50px;
+    border: 2px solid #545454;
+    background: #545454;
+    width: 25%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(207, 155, 88) 20px -10px;
+}
+
+.divBeneficio {
+    box-shadow: rgb(207, 155, 88) 20px -10px;
+    background-color: #545454;
+    margin: 5%;
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+}
+
+.tituloBeneficios {
+    font-size: 150%;
+    color: #CF9B58;
+}
+
+.tituloBeneficios2 {
+    font-size: 130%;
+    color: #CF9B58;
+    padding: 1px;
+}
+
+.textoBeneficios {
+    background-color: #f6f6f6;
+    height: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 11%;
+    font-size: 150%;
+    border-radius: 30px;
+}
+
+.textoBeneficios2 {
+    background-color: #f6f6f6;
+    height: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 11%;
+    font-size: 170%;
+    border-radius: 30px;
+}
 
 
+@media (max-width: 768px) {
+    #containerBeneficios {
+        flex-direction: column;
+    }
 
+    #logoAdv {
+        height: 15%;
+    }
+
+    #coverFundo {
+        height: 650px;
+    }
+
+    #segundoH2{
+        color: #545454;
+        font-family: 'Inter', sans-serif;
+        left: 50%;
+        margin-top: 20%;
+    }
+
+    #blocosDeConteudo{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    #divorcio {
+        border-radius: 50px;
+        border: 2px solid #545454;
+        background: linear-gradient(#545454 0%,#545454 50%,#f6f6f6 40%,#f6f6f6 50%);
+        width: 80%;
+        display: inline-block;
+        margin-top: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+        backdrop-filter: blur(10px);
+        box-shadow: rgb(207, 155, 88) 20px -10px;
+    }
+
+    #containerKa {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column; /* Alterado para coluna em telas menores */
+        align-items: center; /* Centraliza os elementos na coluna */
+        background-color: #f6f6f6;
+        border-radius: 50px;
+        margin: 0 20px;
+        margin-top: 15px;
+        padding: 5px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-shadow: 20px -10px rgb(207, 155, 88);
+        border: 2px solid #545454;
+    }
+    
+    #nomeKarol, #OAB, #bioKaTexto {
+        width: 100%; /* Ocupa toda a largura do containerKa */
+        margin: 10px 0; /* Espaçamento entre os elementos */
+    }
+    
+    #nomeKarol {
+        font-size: 2em; /* Reduzi o tamanho da fonte para telas menores */
+    }
+    
+    #OAB {
+        font-size: 1.5em;
+    }
+    
+    #bioKaTexto {
+        font-size: 1.2em; /* Ajustei o tamanho da fonte */
+    }
+    
+    #fotoKarol {
+        border-radius: 48px;
+        width: 100%; /* Ocupa toda a largura do containerKa */
+        max-width: 98%; /* Limita a largura máxima da imagem */
+        border: 5px solid #545454;
+    }
+    
+
+    #beneficios {
+        font-size: 300%;
+    }
+
+    #divorcio2 {
+        width: 90%;
+    }
+
+
+    #botaoWpp2 {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 10%; /* Ajuste a distância do fundo conforme necessário */
+        right: 8%; /* Ajuste a distância da direita conforme necessário */
+        width: 60px;
+        height: 60px; /* Ajuste a altura conforme necessário */
+        background-color: #25D366;
+        color: #FFF;
+        border: none;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 8px -5px 10px rgba(14, 13, 13, 0.5);
+    }
+
+    /* #botaoWpp2 {
+        border: none;
+        background-color: #25D366;
+        margin-left: 80%;
+        position: -webkit-sticky;
+        width: 60px;
+        height: 10%;
+        bottom: 45%;
+        right: 2%;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        cursor: pointer;
+        box-shadow: rgb(14, 13, 13) 8px -5px 10px;
+    } */
+
+    body{
+        overflow-x: hidden;
+    }
+}
