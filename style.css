@@ -305,7 +305,7 @@ h1 {
         align-items: center; /* Centraliza os elementos na coluna */
         background-color: #f6f6f6;
         border-radius: 50px;
-        margin: 0 20px;
+        margin: 0 15px;
         margin-top: 5vh;
         padding: 5px;
         padding-bottom: 0px;
@@ -313,7 +313,7 @@ h1 {
         padding-right: 0px;
         box-shadow: 20px -10px rgb(207, 155, 88);
         border: 2px solid #545454;
-        width: 88%;
+        width: 90%;
     }
     
     #nomeKarol, #OAB, #bioKaTexto {
@@ -331,6 +331,7 @@ h1 {
     
     #bioKaTexto {
         font-size: 1.2em; /* Ajustei o tamanho da fonte */
+        text-align: center;
     }
     
     #fotoKarol {
@@ -343,10 +344,12 @@ h1 {
 
     #beneficios {
         font-size: 300%;
+        margin-top: 10vh;
     }
 
     #divorcio2 {
         width: 90%;
+        margin-bottom: 2vh;
     }
 
     #linkBotao2 {
