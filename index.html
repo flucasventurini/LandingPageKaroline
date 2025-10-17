@@ -6,105 +6,208 @@
     <script src="https://kit.fontawesome.com/d26217158d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Karoline Correia Advogada</title>
+    <title>Dra. Karoline Correia - Advogada Especialista em Direito das Famílias</title>
 </head>
 <body>
-    
-    
-    <div id="coverFundo">
-        <img src="assets/PNG .png" id="logoAdv" alt="logo Dra Karoline correia">
-        <div>
-            <h1>ADVOGADA ESPECIALISTA EM <br> <span id="direitoDeF">DIREITO DAS FAMÍLIAS</span></h1>
-            <h2 id="primeiroH2">Solucione a sua demanda familiar de forma <span id="direitoDeF">humanizada</span>
-                <br> Agende uma consulta agora mesmo e garanta a melhor <br> <span id="direitoDeF">solução para o seu caso</span></h2>
-                <a href="https://wa.me/message/CPRZ3EYMI5BWB1" id="linkBotao"><button id="botaoWpp"><i class="fa-brands fa-whatsapp"></i>  Falar com especialista</button></a>
-                
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/PNG .png" alt="Logo Dra. Karoline Correia" class="logo-img">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#benefits" class="nav-link">Benefícios</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/PNG .png" alt="Logo Dra. Karoline Correia" class="hero-logo-img">
+            </div>
+            <h1 class="hero-title">
+                ADVOGADA ESPECIALISTA EM DIREITO DAS FAMÍLIAS
+            </h1>
+            <p class="hero-subtitle">
+                Solucione a sua demanda familiar de forma <span class="highlight">humanizada</span><br>
+                Agende uma consulta agora mesmo e garanta a melhor<br>
+                <span class="highlight">solução para o seu caso</span>
+            </p>
+            <a href="https://wa.me/message/CPRZ3EYMI5BWB1" class="cta-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Falar com especialista
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-subtitle">CONHEÇA NOSSAS</span>
+                ÁREAS DE ATUAÇÃO
+            </h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="Ícone Divórcio">
+                    </div>
+                    <h3 class="service-title">Divórcio / Separação</h3>
+                    <p class="service-description">
+                        Põe fim ao casamento. Define a partilha dos bens, pensão alimentícia, 
+                        guarda, visitas aos filhos, nome de casado e altera o estado civil.
+                    </p>
                 </div>
                 
-                <h2 id="segundoH2">
-                    <span id="conhecaAreas">CONHEÇA NOSSAS ÁREAS DE ATUAÇÃO</span>
-                </h2>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="Ícone Direito das Famílias">
+                    </div>
+                    <h3 class="service-title">Direito das Famílias</h3>
+                    <p class="service-description">
+                        Regula os relacionamentos familiares no momento do casamento, divórcio e união estável. 
+                        Direitos patrimoniais e as relações com os filhos de guarda, pensão alimentícia e convivência.
+                    </p>
+                </div>
                 
-                        <div id="blocosDeConteudo">
-                            <div id="divorcio">
-                                <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="" id="iconContrato">
-                                <p class="tituloBox">Divórcio / separação</p>
-                                <p class="textoBox">Põe fim ao casamento.
-                                    Define a partilha dos bens, pensão alimentícia, guarda, visitas aos filhos, nome de casado e altera o estado civil</p>
-                            </div>
-                            
-                            <div id="divorcio">
-                                <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="" id="iconContrato">
-                                <p class="tituloBox">Direito das famílias</p>
-                                <p class="textoBox2">Regula os relacionamentos familiares no momento do casamento, divórcio e união estável.
-                                    Direitos patrimoniais e as relações com os filhos de guarda, pensão alimentícia e convivência</p>
-                                </div>
-                                
-                                <div id="divorcio">
-                                    <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="" id="iconContrato">
-                                    <p class="tituloBox">Sucessões</p>
-                                    <p class="textoBox3">Transfere o patrimônio de pessoas que faleceram para seus herdeiros legais e para aqueles que foram beneficiados por testamento</p>
-                                </div>
-                            </div>
-                            
-                            <!-- <div id="bioKarol">
-            <div id="nomeETexto">
-                <h2 id="nomeKarol">Dra. Karoline Correia Carreira</h2>
-                <h3 id="OAB">OAB/SP n° 483.696</h3>
-                <img src="assets/WhatsApp Image 2023-02-06 at 22.54.17 (1).jpeg" alt="Foto Dra. Karoline, olhando para um notebook cinza" id="fotoKarol">
-                <p id="bioKaTexto">Adovaga que atua exclusivamente na área de Direito das Famílias e Sucessões. <br>
-                    Possui vasta experiência em Ações de fixação de alimentos, regulamentação de guarda <br> e convivência (visitas) e execução de alimentos. <br>
-                    Pós-graduanda em Direito das Famílias e Sucessões pelo IBDFAM - Instituto Brasileiro de Direito de Família. <br>
-                    Atuou por 2 anos junto ao Ministério Público exclusivamente na Vara de Família e Sucessões.
-                </p>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <img src="assets/Screenshot_20230809_132714_Canva-removebg-preview.png" alt="Ícone Sucessões">
+                    </div>
+                    <h3 class="service-title">Sucessões</h3>
+                    <p class="service-description">
+                        Transfere o patrimônio de pessoas que faleceram para seus herdeiros legais e para 
+                        aqueles que foram beneficiados por testamento.
+                    </p>
+                </div>
             </div>
-        </div> -->
-        <div id="containerKa">
-            <div>
-                <h2 id="nomeKarol">Dra. Karoline Correia Carreira</h2>
-                <h3 id="OAB">OAB/SP n° 483.696</h3>
-                                <p id="bioKaTexto">Advogada que atua exclusivamente na área de Direito das Famílias e Sucessões. <br>
-                                    Possui vasta experiência em Ações de fixação de alimentos, regulamentação de guarda <br> e convivência e execução de alimentos. <br>
-                                    Pós-graduanda em Direito das Famílias e Sucessões pelo IBDFAM - Instituto Brasileiro de Direito de Família. <br>
-                                    Atuou por 2 anos junto ao Ministério Público exclusivamente na Vara de Família e Sucessões.</p>
-                                </div>
-                                
-                                <img src="assets/foto nova ka.jpg" alt="Foto Dra. Karoline, de blazer branco olhando para a camera, com expressão séria" id="fotoKarol">
-                                
-                            </div>
-                            
-                            <h2 id="beneficios">Os benefícios de contratar o escritório</h2>
-                            
-                            <div id="containerBeneficios">
-                                <div id="divorcio2">
-                                    <h3 class="tituloBeneficios2">Atendimento facilitado</h3>
-                                    <p class="textoBeneficios2">Entre em contato por WhatsApp sem burocracia!</p>
-                                </div>
-                                
-                                <div id="divorcio2">
-                                    <h3 class="tituloBeneficios">Experiência</h3>
-                                    <p class="textoBeneficios">Advogada com ampla experiência em Direito das Família e Sucessões</p>
-                                </div>
-                                
-                                <div id="divorcio2">
-                                    <h3 class="tituloBeneficios">Transparência</h3>
-                                    <p class="textoBeneficios">Você será informado acerca de todo andamento do processo</p>
-                                </div>
-                                
-                                <div id="divorcio2">
-                                    <h3 class="tituloBeneficios">Contato direto</h3>
-                                    <p class="textoBeneficios">Você terá contato direto com a Advogada pelo WhatsApp para tirar dúvidas sempre que necessário</p>
-                                </div>
-                                
-                            </div>
-                            
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-name">Dra. Karoline Correia Carreira</h2>
+                    <p class="about-oab">OAB/SP n° 483.696</p>
+                    <p class="about-description">
+                        Advogada que atua exclusivamente na área de Direito das Famílias e Sucessões. 
+                        Possui vasta experiência em Ações de fixação de alimentos, regulamentação de guarda 
+                        e convivência e execução de alimentos.
+                    </p>
+                    <p class="about-description">
+                        Pós-graduanda em Direito das Famílias e Sucessões pelo IBDFAM - Instituto Brasileiro 
+                        de Direito de Família. Atuou por 2 anos junto ao Ministério Público exclusivamente 
+                        na Vara de Família e Sucessões.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/foto nova ka.jpg" alt="Dra. Karoline Correia" class="lawyer-photo">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title">Os benefícios de contratar o escritório</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="benefit-title">Atendimento facilitado</h3>
+                    <p class="benefit-description">Entre em contato por WhatsApp sem burocracia!</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="benefit-title">Experiência</h3>
+                    <p class="benefit-description">Advogada com ampla experiência em Direito das Família e Sucessões</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="benefit-title">Transparência</h3>
+                    <p class="benefit-description">Você será informado acerca de todo andamento do processo</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="benefit-title">Contato direto</h3>
+                    <p class="benefit-description">Você terá contato direto com a Advogada pelo WhatsApp para tirar dúvidas sempre que necessário</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Pronto para resolver sua questão familiar?</h2>
+                <p class="contact-subtitle">Entre em contato conosco e agende sua consulta</p>
+                <a href="https://wa.me/message/CPRZ3EYMI5BWB1" class="contact-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com especialista
+                </a>
+            </div>
+        </div>
+    </section>
 
-                            <!-- esse cara tem que ser o ultimo da page senão ele buga kkkkkkkk fodaseeee  -->
-                            <a href="https://wa.me/message/CPRZ3EYMI5BWB1" id="linkBotao2"><button id="botaoWpp2"><i class="fa-brands fa-whatsapp" id="iconeZap"></i></button></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/PNG .png" alt="Logo Dra. Karoline Correia" class="footer-logo-img">
+                </div>
+                <div class="footer-info">
+                    <p class="footer-name">Dra. Karoline Correia Carreira</p>
+                    <p class="footer-oab">OAB/SP n° 483.696</p>
+                    <p class="footer-specialty">Especialista em Direito das Famílias e Sucessões</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/message/CPRZ3EYMI5BWB1" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
