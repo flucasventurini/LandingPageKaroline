@@ -4,7 +4,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import logoGold from '../assets/PNG .png'
 import logoWhite from '../assets/PNG Branco.png'
 import portrait from '../assets/foto nova ka.jpg'
-import officePortrait from '../assets/Advogada de Família.jpeg'
+import officePortrait from '../assets/profile-Karoline.jpg'
 import serviceMark from '../assets/Screenshot_20230809_132714_Canva-removebg-preview.png'
 
 const whatsappUrl = 'https://wa.me/message/CPRZ3EYMI5BWB1'
@@ -21,17 +21,22 @@ const services = [
   {
     title: 'Divórcio / Separação',
     description:
-      'Põe fim ao casamento. Define a partilha dos bens, pensão alimentícia, guarda, visitas aos filhos, nome de casado e altera o estado civil.',
+      'Põe fim ao casamento e define a partilha dos bens, pensão alimentícia, guarda, visitas aos filhos, uso do nome de casado e alteração do estado civil.',
   },
   {
     title: 'Direito das Famílias',
     description:
-      'Regula os relacionamentos familiares no momento do casamento, divórcio e união estável. Direitos patrimoniais e relações com os filhos de guarda, pensão alimentícia e convivência.',
+      'Regula as relações familiares no casamento, divórcio e união estável, incluindo direitos patrimoniais, guarda, pensão alimentícia e convivência com os filhos.',
   },
   {
-    title: 'Sucessões',
+    title: 'Direito e Planejamento Sucessório',
     description:
-      'Transfere o patrimônio de pessoas que faleceram para seus herdeiros legais e para aqueles que foram beneficiados por testamento.',
+      'Trata da transferência do patrimônio de pessoas falecidas aos herdeiros legais e àqueles beneficiados por testamento.',
+  },
+  {
+    title: 'Orientação em divórcios',
+    description:
+      'Guarda, alimentos, regime de convivência, pacto antenupcial, inventários e demais demandas.',
   },
 ]
 
@@ -49,13 +54,13 @@ const benefits = [
   {
     kicker: '03',
     title: 'Transparência',
-    description: 'Você será informado acerca de todo andamento do processo.',
+    description: 'Você será informado sobre todo o andamento do processo.',
   },
   {
     kicker: '04',
     title: 'Contato direto',
     description:
-      'Você terá contato direto com a Advogada pelo WhatsApp para tirar dúvidas sempre que necessário.',
+      'Você terá contato direto com a advogada pelo WhatsApp para tirar dúvidas sempre que necessário.',
   },
 ]
 
@@ -84,6 +89,7 @@ const menuOpen = ref(false)
 const scrolled = ref(false)
 const showTop = ref(false)
 const currentYear = computed(() => new Date().getFullYear())
+let revealObserver
 
 function updateScrollState() {
   scrolled.value = window.scrollY > 18
@@ -101,10 +107,31 @@ function scrollToTop() {
 onMounted(() => {
   updateScrollState()
   window.addEventListener('scroll', updateScrollState, { passive: true })
+
+  const revealItems = document.querySelectorAll('.reveal')
+
+  if ('IntersectionObserver' in window) {
+    revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible')
+            revealObserver.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.16, rootMargin: '0px 0px -8% 0px' },
+    )
+
+    revealItems.forEach((item) => revealObserver.observe(item))
+  } else {
+    revealItems.forEach((item) => item.classList.add('reveal--visible'))
+  }
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', updateScrollState)
+  revealObserver?.disconnect()
 })
 </script>
 
@@ -139,14 +166,14 @@ onBeforeUnmount(() => {
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-copy">
+      <div class="hero-copy reveal reveal--visible">
         <p class="eyebrow">Advocacia familiar em Piracicaba-SP</p>
         <h1>
           Soluções jurídicas para famílias com
           <span>clareza e acolhimento</span>
         </h1>
         <p class="hero-lead">
-          Advogada especialista em Direito das Famílias e Sucessões para orientar divórcio,
+          Advogada especialista em Direito das Famílias e Sucessões para orientar em divórcio,
           guarda, alimentos, inventário e demandas familiares de forma humanizada.
         </p>
 
@@ -165,7 +192,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Dra. Karoline Correia Carreira em escritório">
+      <div class="hero-visual reveal reveal--visible" aria-label="Dra. Karoline Correia Carreira em escritório">
         <div class="orb orb--large"></div>
         <div class="orb orb--small"></div>
         <div class="dot-grid" aria-hidden="true"></div>
@@ -187,13 +214,13 @@ onBeforeUnmount(() => {
     </section>
 
     <section id="services" class="services">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Áreas de atuação</p>
         <h2>Atuação precisa para decisões familiares e patrimoniais sensíveis.</h2>
       </div>
 
       <div class="services-grid">
-        <article v-for="service in services" :key="service.title" class="service-card">
+        <article v-for="service in services" :key="service.title" class="service-card reveal">
           <img :src="serviceMark" alt="" />
           <span>Atuação</span>
           <h3>{{ service.title }}</h3>
@@ -203,11 +230,11 @@ onBeforeUnmount(() => {
     </section>
 
     <section id="about" class="about">
-      <div class="about-media">
+      <div class="about-media reveal">
         <img :src="portrait" alt="Dra. Karoline Correia Carreira" />
       </div>
 
-      <div class="about-content">
+      <div class="about-content reveal">
         <p class="eyebrow">Sobre a advogada</p>
         <h2>Dra. Karoline Correia Carreira</h2>
         <p class="oab">OAB/SP nº 483.695</p>
@@ -218,20 +245,21 @@ onBeforeUnmount(() => {
         </p>
         <p>
           Pós-graduada em Direito das Famílias e Sucessões pelo IBDFAM - Instituto Brasileiro de
-          Direito de Família e atualmente pós-graduanda em LLM Direito Civil na USP-RP. Atuou por 2
-          anos junto ao Ministério Público exclusivamente na Vara de Família e Sucessões.
+          Direito de Família e atualmente pós-graduanda em LL.M. em Direito Civil na USP - Ribeirão
+          Preto. Atuou por dois anos junto ao Ministério Público exclusivamente na Vara de Família e
+          Sucessões.
         </p>
       </div>
     </section>
 
     <section id="benefits" class="benefits">
-      <div class="section-heading section-heading--center">
+      <div class="section-heading section-heading--center reveal">
         <p class="eyebrow">Benefícios</p>
         <h2>Um acompanhamento próximo para transformar incerteza em direção.</h2>
       </div>
 
       <div class="benefits-grid">
-        <article v-for="benefit in benefits" :key="benefit.title" class="benefit-card">
+        <article v-for="benefit in benefits" :key="benefit.title" class="benefit-card reveal">
           <span>{{ benefit.kicker }}</span>
           <h3>{{ benefit.title }}</h3>
           <p>{{ benefit.description }}</p>
@@ -240,7 +268,7 @@ onBeforeUnmount(() => {
     </section>
 
     <section id="contact" class="contact">
-      <div class="contact-panel">
+      <div class="contact-panel reveal">
         <img :src="logoWhite" alt="Karoline Correia Carreira Advogada" />
         <p class="eyebrow">Contato</p>
         <h2>Pronto para resolver sua questão familiar?</h2>
@@ -253,14 +281,23 @@ onBeforeUnmount(() => {
   </main>
 
   <footer class="footer">
-    <div>
-      <strong>Dra. Karoline Correia Carreira</strong>
-      <span>Especialista em Direito das Famílias e Sucessões</span>
-    </div>
-    <div>
-      <span>Rua Voluntários de Piracicaba, nº 1105, Cidade Alta, Piracicaba-SP</span>
+    <div class="footer-brand">
+      <img :src="logoWhite" alt="Karoline Correia Carreira Advogada" />
+      <p>Especialista em Direito das Famílias e Sucessões</p>
       <span>© {{ currentYear }} Karoline Correia Carreira</span>
     </div>
+
+    <nav class="footer-nav" aria-label="Navegação do rodapé">
+      <a v-for="item in navItems" :key="`footer-${item.href}`" :href="item.href">
+        {{ item.label }}
+      </a>
+    </nav>
+
+    <address class="footer-contact">
+      <span>OAB/SP nº 483.695</span>
+      <span>Rua Voluntários de Piracicaba, nº 1105, Sala 2, Cidade Alta, Piracicaba-SP</span>
+      <a :href="whatsappUrl" target="_blank" rel="noreferrer">WhatsApp para agendamento</a>
+    </address>
   </footer>
 
   <a class="whatsapp-float" :href="whatsappUrl" target="_blank" rel="noreferrer" aria-label="Falar pelo WhatsApp">
